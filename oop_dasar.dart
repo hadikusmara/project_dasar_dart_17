@@ -3,10 +3,12 @@ class Person {
   var _address;
   var _bayar;
   String getName() {
+    //memanggil data
     return this._name;
   }
 
   void setName(String name) {
+    //memasukan data
     this._name = name;
   }
 
@@ -18,11 +20,12 @@ class Person {
     this._address = address;
   }
 
-  int getpembayaran() {
+  double getpembayaran() {
     return this._bayar;
   }
 
-  void setpembayaran(int bayar) {
+  void setpembayaran(double bayar) {
+    bayar = bayar * 5;
     this._bayar = bayar;
   }
 }
@@ -32,8 +35,8 @@ main() {
   var kry = new Person();
   kry.setName("Dian");
   kry.setAddress("Bekasi");
-  kry.setpembayaran(30000);
+  kry.setpembayaran(30000.99);
   print("Nama: ${kry.getName()}");
   print("Alamat: ${kry.getAddress()}");
-  print("Pembayar: ${kry.getpembayaran()}");
+  print("Pembayar USD : ${kry.getpembayaran()}");
 }
