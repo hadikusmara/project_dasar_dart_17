@@ -1,7 +1,7 @@
 class Person {
   var _name;
   var _address;
-
+  var _bayar;
   String getName() {
     return this._name;
   }
@@ -17,14 +17,23 @@ class Person {
   void setAddress(String address) {
     this._address = address;
   }
+
+  int getpembayaran() {
+    return this._bayar;
+  }
+
+  void setpembayaran(int bayar) {
+    this._bayar = bayar;
+  }
 }
 
 // fungsi main
 main() {
-  var dian = new Person();
-  dian.setName("Dian");
-  dian.setAddress("Lombok");
-
-  print("Nama: ${dian.getName()}");
-  print("Alamat: ${dian.getAddress()}");
+  var kry = new Person();
+  kry.setName("Dian");
+  kry.setAddress("Bekasi");
+  kry.setpembayaran(30000);
+  print("Nama: ${kry.getName()}");
+  print("Alamat: ${kry.getAddress()}");
+  print("Pembayar: ${kry.getpembayaran()}");
 }
